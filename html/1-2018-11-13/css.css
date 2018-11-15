@@ -1,0 +1,16 @@
+.mau{
+    color: red;
+    font-size: 40px;
+}
+img{
+    width: 30%;
+    height: auto;
+}
+.text{
+    width: 70%;
+    float: left;
+    font-size: 30px;
+}
+.tt{
+    width: 100%;
+}
