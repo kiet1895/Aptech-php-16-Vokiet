@@ -1,16 +1,39 @@
+@font-face{
+    font-family: "Alter Gothic";
+    src: url('../fonts/UTM-Alter-Gothic.ttf');
+}
+body {
+    font-family: "Alter Gothic";
+    font-size: 28px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/* img {
+    max-width: 100%;
+} */
+.clearfix {
+    clear: both;
+}
 .mau{
     color: red;
     font-size: 40px;
 }
-img{
-    width: 30%;
-    height: auto;
-}
 .text{
-    width: 70%;
     float: left;
-    font-size: 30px;
 }
-.tt{
-    width: 100%;
+.avt{
+    float: right;
+}
+.avt img{
+    width: 30%;
+    float: right;
 }
