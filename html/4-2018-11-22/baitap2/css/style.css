@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #212529;
+}
+/* ul{
+    list-style: none;
+} */
+span{
+    font-family: 'Times New Roman', Times, serif;
+}
+.conten{
+    /* padding: 200px; */
+    display: flex;
+    justify-content: space-between;
+}
+ /* dùng flex để căn giữa */
