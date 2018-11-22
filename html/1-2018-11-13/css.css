@@ -23,6 +23,21 @@ a {
 .clearfix {
     clear: both;
 }
+header{
+    widows: 100%;
+    height: 0 auto;
+    justify-content: space-between;
+}
+.conten{
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+}
+.container{
+    width: 80%;
+    height: 0 auto;
+    
+}
 .mau{
     color: red;
     font-size: 40px;
