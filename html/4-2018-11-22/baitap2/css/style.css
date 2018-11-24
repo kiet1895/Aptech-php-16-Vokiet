@@ -3,9 +3,12 @@
     padding: 0px;
     background-color: #212529;
 }
-/* ul{
+ul{
     list-style: none;
-} */
+}
+ul li {
+    float: right;
+}
 span{
     font-family: 'Times New Roman', Times, serif;
 }
