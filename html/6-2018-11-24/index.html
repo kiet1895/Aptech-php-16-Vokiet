@@ -2,23 +2,40 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<div class="container">
-  <h2>Simple Collapsible</h2>
-  <p>Click on the button to toggle between showing and hiding content.</p>
-  <div id="demo" class="collapse">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  <div id="header-dropdow" class="bg-dark collapse">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted ">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        </div>
+        <div class="col-4 list py-4">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">Follow on Twitter</a></li>
+            <li><a href="#">Like on Facebook</a></li>
+            <li><a href="#">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
-</div>
-
+    <div class="navbar bg-dark">
+      <div class="container d-flex justify-content-between">
+          <a href="#" class=" text-white d-flex align-items-center p-2">
+              <i class="fas fa-camera"></i> <strong>Album</strong>
+          </a>
+          <!-- <button class="navbar-toggler" type="button"></button> -->
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#header-dropdow">menu</button>
+      </div>
+    </div>
 </body>
 </html>
