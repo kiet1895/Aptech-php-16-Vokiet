@@ -11,3 +11,10 @@ li a{
 a{
     text-decoration: none;
 }
+/* .card-color{
+    position:absolute;
+    z-index: 1;
+    border: 1px solid #f8f9fa;
+    padding: 0px;
+    padding-left: 0px;
+} */
