@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="document.getElementById('image').style='height:100px;'">zoom out</button>
+    <button onclick="">zoom in</button>
+    <button onclick="cong()= cong() + 1">cong</button>
+
+
+    <button onclick="turnOff()">tunr off</button>
+
+    <img style="height:300px;" id="image" src="image/pic_bulbon.gif" alt="">
+
+    <button onclick="turnOn()">turn on</button>
+   
+ 
+    <script>
+        function turnOff(){
+            document.getElementById('image').src='image/pic_bulboff.gif';
+        }
+        function turnOn(){
+            document.getElementById('image').src='image/pic_bulbon.gif';
+        }
+
+
+        
+        function sum(){
+            var x = 0;
+            var z = cong(x);
+            document.getElementById('image').style='height:'+z+'px';
+        }
+        
+        function cong(){
+            var x =100;
+            var x = x+100;
+           console.log (x);
+        }
+        // var x = 5;
+        // var y = 6;
+        // var z = x + y;
+        // var ten = 'vo kiet';
+        // var a = z + ten;
+        // // typeof : hien thi kieu du lieu cua phan tu
+        // console.log(typeof a,a);
+
+    </script>
+</body>
+</html>

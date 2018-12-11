@@ -5,6 +5,13 @@
 ul{
     list-style: none;
 }
+.Display-table{
+    display: table-cell;
+}
+/* .image-card-items{
+    background-image: url(/html/9-2018-12-06/image/1.jpg);
+    height: 200px;
+} */
 @media only screen and (min-width:768px){
    .icon-menu{
        display: none;
@@ -27,20 +34,3 @@ ul{
         display: none;
     }
 }
-
-
-/* .div-1{
-    border: 3px solid green;
-}
-.div-2{
-    border: 3px solid yellow;
-}
-
-@media only screen and (min-width:768px){
-    .div-1{
-        border: 10px solid green;
-    }
-    .div-2{
-        border: 10px solid yellow;
-    }
-} */

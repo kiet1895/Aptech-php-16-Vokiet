@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row ">
+               <div class="col-12 d-flex justify-content-center align-items-center">
+                    <img data-height="100px"  src="image/pic_bulbon.gif" id="image"/>
+               </div>
+        </div> <hr>
+        <div class="row d-flex justify-content-between">
+                   
+            <button onclick="zoomin()" id="button_z">zoomIn</button>
+            <button onclick="bulbAction()" id="button" value="on">Turn Off</button>
+            <button onclick="zoomOut()" id="button_z">zoomOut</button>
+        </div>
+    </div>
+    <script>
+        function bulbAction(){
+			var button = document.getElementById('button'),
+				image = document.getElementById('image'),
+				current_value = button.value;
+			if(current_value == 'on') {
+				image.src = 'image/pic_bulboff.gif';
+				button.value = 'off';
+				button.textContent = 'Turn On';
+			}
+			if(current_value == 'off') {
+				image.src = 'image/pic_bulbon.gif';
+				button.value = 'on';
+				button.textContent = 'Turn Off';
+			}
+        }
+        function zoomin(){
+            var images = document.getElementById('image');
+            var imgHeight = images.clientHeight;
+            images.style.height= (imgHeight+10)+"px";
+        }
+        function zoomOut(){
+            var images = document.getElementById('image');
+            var imgHeight = images.clientHeight;
+            images.style.height= (imgHeight-10)+"px";
+        }
+        
+        // function sum(){
+        //     var x = 0;
+        //     var z = cong(x);
+        //     document.getElementById('image').style='height:'+z+'px';
+        // }
+        
+        // function cong(){
+        //     var x =100;
+        //     var x = x+100;
+        //    console.log (x);
+        // }
+        // var x = 5;
+        // var y = 6;
+        // var z = x + y;
+        // var ten = 'vo kiet';
+        // var a = z + ten;
+        // // typeof : hien thi kieu du lieu cua phan tu
+        // console.log(typeof a,a);
+
+    </script>
+</body>
+</html>
