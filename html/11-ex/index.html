@@ -24,7 +24,8 @@
             <tbody>
             </tbody>
       </table>
-      <script>
+      <!-- cach 1 dung each() -->
+      <!-- <script>
         $.getJSON( "data.json", function( data ){
             var items = [];
             var mess = '';
@@ -43,9 +44,31 @@
                 items.push( "</tr>");
             });
                 $( "<tbody/>", {html: items.join( "" )}).appendTo( "table" );
-                
         });
-  
+      </script> -->
+
+      <!--  cach 2 dung for -->
+      <script>
+          $.getJSON("data.json",function(data){
+             //console.log(Object.keys(data));
+             var items = [];
+             var k = Object.keys(data);
+             for(var i=1 ; i< k.length;i++){
+                for(var j=0; j< data[k[i]].length ;j++){
+                    //console.log(data[k[i]].length); = console.lo(data.users.length);
+                    //console.log(data[k[i]][j].id);
+                    items.push( "<tr>");
+                    items.push( "<td>" + data[k[i]][j].id + "</td>" );
+                    items.push( "<td>" + data[k[i]][j].name + "</td>" );
+                    items.push( "<td>" + data[k[i]][j].email + "</td>" );
+                    items.push( "<td>" + data[k[i]][j].password + "</td>" );
+                    items.push( "<td>" + data[k[i]][j].created_at + "</td>" );
+                    items.push( "<td>" + data[k[i]][j].updated_at + "</td>" );
+                    items.push( "</tr>");
+                }
+             }
+             $( "<tbody/>", {html: items.join( "" )}).appendTo( "table" );
+          });
       </script>
     </body>
 </html>

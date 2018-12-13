@@ -9,12 +9,25 @@
     
 </head>
 <body>
-   <div id="div1"></div>
-   <button id="button">click</button>
+        <img data-height="100px"  src="image/pic_bulbon.gif" id="image"/>
+        <button class="btn" id="button" value="on">Turn Off</button>
+
+
+
    <script>
         $(document).ready(function(){
             $('button').click(function(){
-                $('#div1').load('demo.txt');
+                console.log(button.value);
+               if(button.value == 'on'){
+                    $('img').attr('src','image/pic_bulboff.gif');
+                    $('button').attr('value','off');
+                    $( "button" ).text("Turn On");
+               }
+               else{
+                    $('img').attr('src','image/pic_bulbon.gif');
+                    $('button').attr('value','on');
+                    $( "button" ).text("Turn Off");
+               }
             });
         });
     </script>

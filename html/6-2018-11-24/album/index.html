@@ -6,10 +6,12 @@
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
       <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+      <script src="js/jquery.min.js"></script>
    </head>
    <body style="font-family: 'Lobster', cursive;">
       <header>
-         <div id="header-dropdow" class="bg-dark collapse">
+         <div id="header-dropdow" class="bg-dark anhien d-none"> 
+            <!-- collapse -->
             <div class="container">
                <div class="row">
                   <div class="col-8 py-4">
@@ -34,9 +36,19 @@
                <a href="#" class=" text-white d-flex align-items-center p-2">
                <i class="fas fa-camera mr-1"></i><strong>Album</strong>
                </a>
-               <button type="button" class="btn btn-outline-primary navbar-dark" data-toggle="collapse" data-target="#header-dropdow"><span class="navbar-toggler-icon"></span></button>
+               <button type="button" class=" btnn btn btn-outline-primary navbar-dark" >ffff</button>
+               <!-- <button type="button" class="btn btn-outline-primary navbar-dark" data-toggle="collapse" data-target="#header-dropdow"><span class="navbar-toggler-icon"></span></button> -->
             </div>
          </div>
+         <script>
+            $(document).ready(function(){
+               $(".btnn").click(function(){
+                  // $("#header-dropdow").toggleClass("d-flex");
+                  // $("#header-dropdow").toggleClass("d-none");
+                  $("#header-dropdow").fadeToggle();
+               });
+            });
+         </script>
       </header>
       <main>
          <section>
