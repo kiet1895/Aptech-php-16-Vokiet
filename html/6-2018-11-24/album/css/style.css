@@ -11,6 +11,9 @@ li a{
 a{
     text-decoration: none;
 }
+.anhien{
+    display: none;
+}
 /* .card-color{
     position:absolute;
     z-index: 1;

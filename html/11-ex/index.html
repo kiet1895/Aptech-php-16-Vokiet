@@ -9,8 +9,9 @@
     <title>Document</title>
 </head>
 <body> 
-    <h1 class="text-center"></h1> <br>
-    <table class="table">
+    <h1 class="text-center">welcome to data Json</h1> <br>
+    <button type="button" class="btn btn-secondary">Data</button>
+    <table class="table" style="display:none;">
         <thead>
             <tr>
                 <th>ID</th>
@@ -25,30 +26,36 @@
             </tbody>
       </table>
       <!-- cach 1 dung each() -->
-      <!-- <script>
-        $.getJSON( "data.json", function( data ){
-            var items = [];
-            var mess = '';
-            mess = data.message;
-            $( "<p>"+mess+"</p>" ).appendTo( "h1" );
-            console.log(data.message);
-            $.each( data.users, function(index) {
-                //console.log(data.users[index].id);
-                items.push( "<tr>");
-                items.push( "<td>" + data.users[index].id + "</td>" );
-                items.push( "<td>" + data.users[index].name + "</td>" );
-                items.push( "<td>" + data.users[index].email + "</td>" );
-                items.push( "<td>" + data.users[index].password + "</td>" );
-                items.push( "<td>" + data.users[index].created_at + "</td>" );
-                items.push( "<td>" + data.users[index].updated_at + "</td>" );
-                items.push( "</tr>");
+      <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $.getJSON( "data.json", function( data ){
+                    var items = [];
+                    var mess = '';
+                    mess = data.message;
+                    //$( "<p>"+mess+"</p>" ).appendTo( "h1" );
+                    $( "h1" ).text( mess );
+                    console.log(data.message);
+                    $.each( data.users, function(index) {
+                        //console.log(data.users[index].id);
+                        items.push( "<tr>");
+                        items.push( "<td>" + data.users[index].id + "</td>" );
+                        items.push( "<td>" + data.users[index].name + "</td>" );
+                        items.push( "<td>" + data.users[index].email + "</td>" );
+                        items.push( "<td>" + data.users[index].password + "</td>" );
+                        items.push( "<td>" + data.users[index].created_at + "</td>" );
+                        items.push( "<td>" + data.users[index].updated_at + "</td>" );
+                        items.push( "</tr>");
+                    });
+                        $( "<tbody/>", {html: items.join( "" )}).appendTo( "table" );
+                });
+                $(".table").fadeToggle();
             });
-                $( "<tbody/>", {html: items.join( "" )}).appendTo( "table" );
         });
-      </script> -->
+      </script>
 
       <!--  cach 2 dung for -->
-      <script>
+      <!-- <script>
           $.getJSON("data.json",function(data){
              //console.log(Object.keys(data));
              var items = [];
@@ -69,6 +76,6 @@
              }
              $( "<tbody/>", {html: items.join( "" )}).appendTo( "table" );
           });
-      </script>
+      </script> -->
     </body>
 </html>
