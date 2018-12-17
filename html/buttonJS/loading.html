@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // $("#hide").click(function(){
+  //   $("p").hide();
+  // });
+  $("#show").click(function(){
+    $("#loading").show();
+     setTimeout(function(){
+      $.getJSON("data.json",function(data){
+       console.log(data.users[0].id);
+        document.write(data.users[0].id);
+     });
+     },1000);
+    });
+    $("#loading").hide();
+});
+</script>
+</head>
+<body>
+
+<p id="loading" style="display:none"><img src="image/loading2.gif" alt="#"></p>
+
+<!-- <button id="hide">Hide</button> -->
+<button id="show">Show</button>
+
+</body>
+</html>

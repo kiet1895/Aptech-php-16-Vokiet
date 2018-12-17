@@ -2,35 +2,12 @@
     padding: 0;
     margin: 0;
 }
-ul{
-    list-style: none;
+#load{
+    position: absolute;
+    z-index: 1;
+    height: 500px;
+    width: 100%;
 }
-.Display-table{
-    display: table-cell;
-}
-/* .image-card-items{
-    background-image: url(/html/9-2018-12-06/image/1.jpg);
-    height: 200px;
-} */
-@media only screen and (min-width:768px){
-   .icon-menu{
-       display: none;
-   }
-   .nav-menu{
-       display:inline-flex !important;
-   }
-   /* li{
-       display: inline-block !important;
-   } */
-}
-@media only screen and (max-width:767px){
-    .sign-up{
-        display: none;
-    }
-    .sign-in{
-        display: none;
-    }
-    .card-3{
-        display: none;
-    }
+#loading{
+    display: none;
 }

@@ -1,81 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery.min.js"></script>
-    <title>Document</title>
-</head>
-<body> 
-    <h1 class="text-center">welcome to data Json</h1> <br>
-    <button type="button" class="btn btn-secondary">Data</button>
-    <table class="table" style="display:none;">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th> 
-                <th>Email</th>
-                <th>Password</th>
-                <th>created_at</th>
-                <th>updated_at</th>
-            </tr>
-        </thead>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <title>Document</title>
+   </head>
+   <body>
+      <h1 class="text-center">welcome to data Json</h1>
+      <br>
+      <button type="button" class="btn btn-secondary">Data</button>
+      <div id="load" class="d-flex align-items-center justify-content-center">
+         <p id="loading"><img src="image/loading2.gif" alt="#"></p>
+      </div>
+      <div class="table-responsive">
+         <table class="table table-striped" style="display:none">
+            <thead class="thead-dark">
+               <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Password</th>
+                  <th>created_at</th>
+                  <th>updated_at</th>
+               </tr>
+            </thead>
             <tbody>
             </tbody>
-      </table>
+         </table>
+     </div>
       <!-- cach 1 dung each() -->
       <script>
-        $(document).ready(function(){
-            $('button').click(function(){
-                $.getJSON( "data.json", function( data ){
-                    var items = [];
-                    var mess = '';
-                    mess = data.message;
-                    //$( "<p>"+mess+"</p>" ).appendTo( "h1" );
-                    $( "h1" ).text( mess );
-                    console.log(data.message);
-                    $.each( data.users, function(index) {
-                        //console.log(data.users[index].id);
-                        items.push( "<tr>");
-                        items.push( "<td>" + data.users[index].id + "</td>" );
-                        items.push( "<td>" + data.users[index].name + "</td>" );
-                        items.push( "<td>" + data.users[index].email + "</td>" );
-                        items.push( "<td>" + data.users[index].password + "</td>" );
-                        items.push( "<td>" + data.users[index].created_at + "</td>" );
-                        items.push( "<td>" + data.users[index].updated_at + "</td>" );
-                        items.push( "</tr>");
-                    });
-                        $( "<tbody/>", {html: items.join( "" )}).appendTo( "table" );
-                });
-                $(".table").fadeToggle();
+         $(document).ready(function(){
+              $('button').click(function(){
+                  $("#loading").show();
+                  setTimeout(function(){
+                     $.getJSON( "data.json", function( data ){
+                      var items = [];
+                      var mess = '';
+                      mess = data.message;
+                      $( "h1" ).text( mess );
+                      console.log(data.message);
+                      $.each( data.users, function(index) {
+                          //console.log(data.users[index].id);
+                          items.push( "<tr>");
+                          items.push( "<td>" + data.users[index].id + "</td>" );
+                          items.push( "<td>" + data.users[index].name + "</td>" );
+                          items.push( "<td>" + data.users[index].email + "</td>" );
+                          items.push( "<td>" + data.users[index].password + "</td>" );
+                          items.push( "<td>" + data.users[index].created_at + "</td>" );
+                          items.push( "<td>" + data.users[index].updated_at + "</td>" );
+                          items.push( "</tr>");
+                      });
+                          $( "<tbody/>", {html: items.join( "" )}).appendTo( "table" );
+                  });
+                  $(".table").fadeToggle();
+                  // $('body').loading({
+                  //     stoppable: true
+                  // });
+                  },3000); 
+                  console.log(60);
+                  setTimeout(function(){
+                     $("#loading").hide();  
+                  },3500);
+               });
+               
             });
-        });
       </script>
-
       <!--  cach 2 dung for -->
       <!-- <script>
-          $.getJSON("data.json",function(data){
-             //console.log(Object.keys(data));
-             var items = [];
-             var k = Object.keys(data);
-             for(var i=1 ; i< k.length;i++){
-                for(var j=0; j< data[k[i]].length ;j++){
-                    //console.log(data[k[i]].length); = console.lo(data.users.length);
-                    //console.log(data[k[i]][j].id);
-                    items.push( "<tr>");
-                    items.push( "<td>" + data[k[i]][j].id + "</td>" );
-                    items.push( "<td>" + data[k[i]][j].name + "</td>" );
-                    items.push( "<td>" + data[k[i]][j].email + "</td>" );
-                    items.push( "<td>" + data[k[i]][j].password + "</td>" );
-                    items.push( "<td>" + data[k[i]][j].created_at + "</td>" );
-                    items.push( "<td>" + data[k[i]][j].updated_at + "</td>" );
-                    items.push( "</tr>");
-                }
-             }
-             $( "<tbody/>", {html: items.join( "" )}).appendTo( "table" );
-          });
-      </script> -->
-    </body>
+         $.getJSON("data.json",function(data){
+            //console.log(Object.keys(data));
+            var items = [];
+            var k = Object.keys(data);
+            for(var i=1 ; i< k.length;i++){
+               for(var j=0; j< data[k[i]].length ;j++){
+                   //console.log(data[k[i]].length); = console.lo(data.users.length);
+                   //console.log(data[k[i]][j].id);
+                   items.push( "<tr>");
+                   items.push( "<td>" + data[k[i]][j].id + "</td>" );
+                   items.push( "<td>" + data[k[i]][j].name + "</td>" );
+                   items.push( "<td>" + data[k[i]][j].email + "</td>" );
+                   items.push( "<td>" + data[k[i]][j].password + "</td>" );
+                   items.push( "<td>" + data[k[i]][j].created_at + "</td>" );
+                   items.push( "<td>" + data[k[i]][j].updated_at + "</td>" );
+                   items.push( "</tr>");
+               }
+            }
+            $( "<tbody/>", {html: items.join( "" )}).appendTo( "table" );
+         });
+         </script> -->
+   </body>
 </html>
