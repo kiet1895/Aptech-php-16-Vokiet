@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="js/jquery.min.js"></script>
+</head>
+<body>
+  <!-- <button id="js-post-button">Get Post</button> -->
+  <button id="js-button">Click Me Pls !</button>
+  <div id="js-div-data"></div>
+  <div id="js-div-table"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // $('#js-post-button').click(function () {
+      //   $.get('http://101.0.86.110:6699/api/posts?page=2', function (response) {
+      //     var data = response.data.posts.data;
+      //     for (i = 0; i < data.length; i++) {
+      //       var div = '<div id="js-div-' + data[i].id + '">';
+      //       $(div).appendTo('#js-div-data');
+      //       var h1 = '<h1>' + data[i].title + '</h1>';
+      //       $(h1).appendTo('#js-div-' + data[i].id);
+      //     }
+      //   });
+      // });
+      $('#js-button').click(function () {
+        // $.get('./data.json', function (response) {
+        $.get('https://namcoi.com/projects/laravel-crud/api/users', function (response) {
+          console.log(response);
+          var table = '<table id="js-table" class="table"></table>';
+          $('#js-div-table').append(table);
+          var thead = '<thead id="js-thead"></thead>';
+          $(thead).appendTo('#js-table');
+          var tr = '<tr id="js-tr-head"></tr>';
+          $(tr).appendTo('#js-thead');
+          var th = '<th>STT</th><th>ID</th><th>Name</th><th>Email</th>';
+          $(th).appendTo('#js-tr-head');
+          var tbody = ' <tbody></tbody>';
+          $('#js-thead').after(tbody);
+
+          for (i = 0; i < response.length; i++) {
+            //console.log(response[i].id);
+            var trBody = '<tr id="trBody-' + response[i].id + '"></tr>';
+            $(trBody).appendTo('tbody');
+            var thBody = ' <th>' + (i + 1) + '</th>';
+            var tdBody = '<td>' + response[i].id + '</td>'+'<td>' + response[i].name + '</td>'+'<td>' + response[i].email + '</td> ';
+            $('#trBody-' + response[i].id).append(thBody, tdBody);
+          }
+        });
+      })
+    });
+  </script>
+</body>
+
+</html>
