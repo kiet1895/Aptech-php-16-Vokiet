@@ -1,13 +1,31 @@
-*{
+ul{
+    list-style: none;
     padding: 0;
-    margin: 0;
 }
-#load{
-    position: absolute;
-    z-index: 1;
-    height: 500px;
-    width: 100%;
+
+.hhh{
+    background-image: url('/html/8-2018-1-12/image/1.jpg');
+    background-size: cover;
+    background-position: center;
+    height:500px;
 }
-#loading{
-    display: none;
+.hhh2{
+    background-image: url('/html/8-2018-1-12/image/2.jpg');
+    background-size: cover;
+    background-position: center;
+    height:500px;
 }
+.hhh3{
+    background-image: url('/html/8-2018-1-12/image/3.jpg');
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+.hhh4{
+    background-image: url('/html/8-2018-1-12/image/4.jpg');
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+
+
