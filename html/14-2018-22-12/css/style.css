@@ -1,0 +1,36 @@
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.hhh{
+    background-image: url('/html/8-2018-1-12/image/1.jpg');
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+.hhh2{
+    background-image: url('/html/8-2018-1-12/image/2.jpg');
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+.hhh3{
+    background-image: url('/html/8-2018-1-12/image/3.jpg');
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+.hhh4{
+    background-image: url('/html/8-2018-1-12/image/4.jpg');
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+@media only screen and (max-width:767px){
+    .slide{
+        display: none;
+    }
+ }
+
+

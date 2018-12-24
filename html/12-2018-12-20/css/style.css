@@ -2,30 +2,41 @@ ul{
     list-style: none;
     padding: 0;
 }
-
-.hhh{
+ .bg-color{
+    background-color: #D9D9D9;
+ }
+.image-1{
     background-image: url('/html/8-2018-1-12/image/1.jpg');
     background-size: cover;
     background-position: center;
-    height:500px;
+    height:200px;
 }
-.hhh2{
+.nav-1{
+    display: none;
+}
+.image-2{
     background-image: url('/html/8-2018-1-12/image/2.jpg');
     background-size: cover;
     background-position: center;
-    height:500px;
+    height:200px;
 }
-.hhh3{
+.image-3{
     background-image: url('/html/8-2018-1-12/image/3.jpg');
     background-size: cover;
     background-position: center;
-    height:500px;
+    height:200px;
 }
-.hhh4{
-    background-image: url('/html/8-2018-1-12/image/4.jpg');
-    background-size: cover;
-    background-position: center;
-    height:500px;
+.welcome{
+    padding: 0 0 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 2px solid #1b1b1b;
+}
+.logo{
+    font-family: 'Abril Fatface', cursive;
+
+}
+.image-font{
+    font-family: 'Montserrat', sans-serif;
 }
 
 
