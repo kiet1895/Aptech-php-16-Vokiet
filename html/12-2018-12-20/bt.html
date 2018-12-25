@@ -37,31 +37,37 @@
    <body>
       <header>
          <script>
+            function changeCss(number){
+               var x = ".nav-" + number;
+               //console.log(x);
+               $(x).css("display", "block");
+            }
+            function changeCssOut(number){
+               var x = ".nav-" + number;
+               //console.log(x);
+               $(x).css("display", "none");
+            }
+            function changeImage(number){
+               //console.log(number);
+               var y = ".image-"+ number;
+               $(y).mouseover(function(){
+                  changeCss(number);
+               });
+               $(y).mouseout(function(){
+                  changeCssOut(number);
+               });
+            };
             $(document).ready(function(){
-               $(".image-8").mouseover(function(){
-                  $(".nav-8").css("display", "block");
-                  //$(".nav-1").fadeIn();
-               });
-               $(" .image-8").mouseout(function(){
-                  $(".nav-8").css("display", "none");
-                 // $(".nav-1").fadeOut();
-               });
-               $(".image-6").mouseover(function(){
-                  $(".nav-6").css("display", "block");
-                  //$(".nav-1").fadeIn();
-               });
-               $(" .image-6").mouseout(function(){
-                  $(".nav-6").css("display", "none");
-                  // $(".nav-1").fadeOut();
-               });
-               $(".image-7").mouseover(function(){
-                  $(".nav-7").css("display", "block");
-                  //$(".nav-1").fadeIn();
-               });
-               $(" .image-7").mouseout(function(){
-                  $(".nav-7").css("display", "none");
-                  // $(".nav-1").fadeOut();
-               });
+               changeImage(8);
+               changeImage(6);
+               changeImage(7);
+               // $(".image-6").mouseover(function(){
+               //    $(".nav-6").css("display", "block");
+               // });
+               // $(" .image-6").mouseout(function(){
+               //    $(".nav-6").css("display", "none");
+               //    // $(".nav-1").fadeOut();
+               // });
             });
          </script>
          <div class="container">
@@ -76,17 +82,15 @@
                   </div>
                </div>
                <div class="col-4 image-font">
-                  <div class="image-1 mb-1">
-                     
-                  </div>
-                  <div class="image-2"></div>
-                  <div class="image-3 mb-1"></div>
+                  <div class="image-1 mb-1 shadow rounded "></div>
+                  <div class="image-2 mb-1 shadow rounded"></div>
+                  <div class="image-3 mb-1 shadow rounded"></div>
                </div>
             </div>
          </div>
       </header>
       <main>
-            <div class="sticky-top row border-bottom d-flex align-items-center bg-light">
+            <div class="sticky-top shadow rounded row border-bottom d-flex align-items-center bg-light">
                   <div class="col-8">
                      <h5 class="ml-5">K Shop</h5>
                   </div>
@@ -97,7 +101,7 @@
                         <div id="cart">
                           <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
                         </div>
-                        <span id="itemCount">2</span>
+                        <span id="itemCount"></span>
                       </div>
                       
                      <!-- <button type="button" class="btn btn-outline-primary my-3" data-toggle="modal" data-target="#exampleModalCenter">Sign in</button> -->
@@ -138,16 +142,16 @@
          <div class="container">
             <div class="row bg-color">
                <div class="owl-carousel loop owl-theme">
-                  <div class="item image-4" data-merge="1"></div>
-                  <div class="item image-5" data-merge="2"></div>
-                  <div class="item image-6" data-merge="1"></div>
-                  <div class="item image-7" data-merge="3"></div>
-                  <div class="item image-8" data-merge="6"></div>
+                  <div class="item shadow image-4 rounded" data-merge="1"></div>
+                  <div class="item shadow image-5 rounded" data-merge="2"></div>
+                  <div class="item shadow image-6 rounded" data-merge="1"></div>
+                  <div class="item shadow image-7 rounded" data-merge="3"></div>
+                  <div class="item shadow image-8 rounded" data-merge="6"></div>
                   </div>
             </div>
             <div class="row bg-color">
                <div class="col-4">
-                     <div class="image-8">
+                     <div class="image-8 shadow rounded">
                            <div class="bg-secondary h-100 nav-8">
                                  <div>
                                     <h1 class="text-danger d-flex justify-content-center align-items-center">Hổ (Tiger)</h1>
@@ -165,7 +169,7 @@ và là một trong bốn loại "mèo lớn"
                      </div>
                </div>
                <div class="col-4">
-                     <div class="image-6 h-100">
+                     <div class="image-6 shadow rounded ">
                            <div class="bg-secondary h-100 nav-6 ">
                                  <div>
                                     <h1 class="text-danger d-flex justify-content-center align-items-center">Hổ (Tiger)</h1>
@@ -183,7 +187,7 @@ và là một trong bốn loại "mèo lớn"
                      </div>
                </div>
                <div class="col-4">
-                     <div class="image-7 h-100">
+                     <div class="image-7 shadow rounded">
                            <div class="bg-secondary h-100 nav-7 ">
                                  <div>
                                     <h1 class="text-danger d-flex justify-content-center align-items-center">Hổ (Tiger)</h1>

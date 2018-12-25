@@ -1,0 +1,48 @@
+ul{
+    list-style: none;
+    padding: 0;
+}
+.water{
+    background-image: url('/html/15-2018-12-15/image/nuoc.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.hhh{
+    background-image: url('/html/8-2018-1-12/image/1.jpg');
+    background-size: cover;
+    background-position: center;
+    height:300px;
+}
+.hhh2{
+    background-image: url('/html/8-2018-1-12/image/2.jpg');
+    background-size: cover;
+    background-position: center;
+    height:300px;
+}
+.hhh3{
+    background-image: url('/html/8-2018-1-12/image/3.jpg');
+    background-size: cover;
+    background-position: center;
+    height:300px;
+}
+.hhh4{
+    background-image: url('/html/8-2018-1-12/image/4.jpg');
+    background-size: cover;
+    background-position: center;
+    height:300px;
+}
+.style-nav{
+    top:75%;
+    left:10%; 
+    color:white;
+
+}
+/* @media only screen and (max-width:767px){
+    .slide{
+        display: none;
+    }
+ } */
+
+
