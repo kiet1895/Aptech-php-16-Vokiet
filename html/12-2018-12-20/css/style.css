@@ -4,24 +4,73 @@ ul{
 }
  .bg-color{
     background-color: #D9D9D9;
- }
+}
+.nav-8{
+    display: none;
+    opacity: 0.6;
+}
+.nav-6{
+    display: none;
+    opacity: 0.6;
+    z-index: 1;
+    
+}
+.nav-7{
+    display: none;
+    opacity: 0.6;
+}
+.nav-4{
+    display: none;
+    opacity: 0.6;
+}
+.nav-3{
+    display: none;
+    opacity: 0.6;
+}
 .image-1{
-    background-image: url('/html/8-2018-1-12/image/1.jpg');
+    background-image: url('/html/12-2018-12-20/image/Tiger.jpg');
     background-size: cover;
     background-position: center;
     height:200px;
 }
-.nav-1{
-    display: none;
-}
 .image-2{
-    background-image: url('/html/8-2018-1-12/image/2.jpg');
+    background-image: url('/html/12-2018-12-20/image/lion.jpg');
     background-size: cover;
     background-position: center;
     height:200px;
 }
 .image-3{
-    background-image: url('/html/8-2018-1-12/image/3.jpg');
+    background-image: url('/html/12-2018-12-20/image/bao.jpg');
+    background-size: cover;
+    background-position: center;
+    height:200px;
+}
+.image-4{
+    background-image: url('/html/12-2018-12-20/image/soc.jpg');
+    background-size: cover;
+    background-position: center;
+    height:200px;
+}
+.image-5{
+    background-image: url('/html/12-2018-12-20/image/dog.jpg');
+    background-size: cover;
+    background-position: center;
+    height:200px;
+}
+.image-6{
+    background-image: url('/html/12-2018-12-20/image/huou.jpg');
+    background-size: cover;
+    background-position: center;
+    height:200px;
+}
+.image-7{
+    background-image: url('/html/12-2018-12-20/image/soi2.jpg');
+    background-size: cover;
+    background-position: center;
+    height:200px;
+}
+.image-8{
+    background-image: url('/html/12-2018-12-20/image/voi.jpg');
     background-size: cover;
     background-position: center;
     height:200px;
@@ -38,5 +87,24 @@ ul{
 .image-font{
     font-family: 'Montserrat', sans-serif;
 }
+#cart-container {
+    float: right;
+    width: 210px;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+#itemCount {
+    position: absolute;
+    display: none;
+    top: -10px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    text-align: center;
+  }
 
 

@@ -9,29 +9,59 @@
       <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.min.css">
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.min.css">
+      <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
       <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-
+      <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+      <script>
+            $(document).ready(function() {
+               $('.loop').owlCarousel({
+                  center: true,
+                  items:6,
+                  loop:true,
+                  margin:10,
+                  responsive:{
+                     600:{
+                           items:4
+                     }
+                  }
+               });
+            });
+        </script>
    </head>
    <body>
       <header>
          <script>
             $(document).ready(function(){
-               $(".image-1").mouseover(function(){
-                  console.log(24);
-                  $(".nav-1").css("display", "block");
+               $(".image-8").mouseover(function(){
+                  $(".nav-8").css("display", "block");
                   //$(".nav-1").fadeIn();
                });
-               $(".image-1").mouseout(function(){
-                  console.log(24);
-                  $(".nav-1").css("display", "none");
+               $(" .image-8").mouseout(function(){
+                  $(".nav-8").css("display", "none");
                  // $(".nav-1").fadeOut();
                });
-               console.log(31);
+               $(".image-6").mouseover(function(){
+                  $(".nav-6").css("display", "block");
+                  //$(".nav-1").fadeIn();
+               });
+               $(" .image-6").mouseout(function(){
+                  $(".nav-6").css("display", "none");
+                  // $(".nav-1").fadeOut();
+               });
+               $(".image-7").mouseover(function(){
+                  $(".nav-7").css("display", "block");
+                  //$(".nav-1").fadeIn();
+               });
+               $(" .image-7").mouseout(function(){
+                  $(".nav-7").css("display", "none");
+                  // $(".nav-1").fadeOut();
+               });
             });
          </script>
          <div class="container">
@@ -46,55 +76,141 @@
                   </div>
                </div>
                <div class="col-4 image-font">
-                     
                   <div class="image-1 mb-1">
-                        <div class="bg-secondary h-100 nav-1">
-                           <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
+                     
                   </div>
-                  <div class="image-2 mb-1"></div>
+                  <div class="image-2"></div>
                   <div class="image-3 mb-1"></div>
                </div>
             </div>
          </div>
       </header>
       <main>
+            <div class="sticky-top row border-bottom d-flex align-items-center bg-light">
+                  <div class="col-8">
+                     <h5 class="ml-5">K Shop</h5>
+                  </div>
+                  <div class="col-4 d-flex">
+                     <a href="#" class="p-2 text-dark my-3">Lien he</a>
+                     <a href="#" class="p-2 text-dark my-3">Phan hoi</a>
+                     <div id="cart-container">
+                        <div id="cart">
+                          <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <span id="itemCount">2</span>
+                      </div>
+                      
+                     <!-- <button type="button" class="btn btn-outline-primary my-3" data-toggle="modal" data-target="#exampleModalCenter">Sign in</button> -->
+                  </div>
+               </div>
+               <!-- fffff -->
+               <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                           </button>
+                        </div>
+                        <div class="modal-body">
+                           <form>
+                              <div class="form-row">
+                                 <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                 </div>
+                                 <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- ffffff -->
          <div class="container">
             <div class="row bg-color">
-               <div class="col-4">
-                  <div class="image-2 mb-1"></div>
-                  <div class="image-3 mb-1"></div>
-               </div>
-               <div class="col-8">
-                  <div class="image-1 mb-1"></div>
-                  <div class="image-3 mb-1"></div>
-               </div>
-            </div>
-            <div class="row bg-color">
-               <div class="col-8">
-                  <div class="image-1 mb-1"></div>
-                  <div class="image-3 mb-1"></div>
-               </div>
-               <div class="col-4">
-                  <div class="image-2 mb-1"></div>
-                  <div class="image-3 mb-1"></div>
-               </div>
+               <div class="owl-carousel loop owl-theme">
+                  <div class="item image-4" data-merge="1"></div>
+                  <div class="item image-5" data-merge="2"></div>
+                  <div class="item image-6" data-merge="1"></div>
+                  <div class="item image-7" data-merge="3"></div>
+                  <div class="item image-8" data-merge="6"></div>
+                  </div>
             </div>
             <div class="row bg-color">
                <div class="col-4">
-                  <div class="image-2 mb-1"></div>
-                  <div class="image-3 mb-1"></div>
+                     <div class="image-8">
+                           <div class="bg-secondary h-100 nav-8">
+                                 <div>
+                                    <h1 class="text-danger d-flex justify-content-center align-items-center">Hổ (Tiger)</h1>
+                                    <pre class="p-0 text-white">
+- Ăn thịt
+- Động vật có vú thuộc họ Mèo (Felidae)
+và là một trong bốn loại "mèo lớn"
+                                       </pre>
+                                 </div>
+                                 <div class="d-flex justify-content-center align-items-center">
+                                    <button type="button" class="add btn btn-danger mr-2"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                                    <button type="button" class="btn btn-danger">Chi tiết</button>
+                                 </div>
+                              </div>
+                     </div>
                </div>
-               <div class="col-8">
-                  <div class="image-1 mb-1"></div>
-                  <div class="image-3 mb-1"></div>
+               <div class="col-4">
+                     <div class="image-6 h-100">
+                           <div class="bg-secondary h-100 nav-6 ">
+                                 <div>
+                                    <h1 class="text-danger d-flex justify-content-center align-items-center">Hổ (Tiger)</h1>
+                                    <pre class="p-0 text-white">
+- Ăn thịt
+- Động vật có vú thuộc họ Mèo (Felidae)
+và là một trong bốn loại "mèo lớn"
+                                       </pre>
+                                 </div>
+                                 <div class="d-flex justify-content-center align-items-center">
+                                    <button type="button" class="add btn btn-danger mr-2"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                                    <button type="button" class="btn btn-danger">Chi tiết</button>
+                                 </div>
+                              </div>
+                     </div>
                </div>
-            </div>
+               <div class="col-4">
+                     <div class="image-7 h-100">
+                           <div class="bg-secondary h-100 nav-7 ">
+                                 <div>
+                                    <h1 class="text-danger d-flex justify-content-center align-items-center">Hổ (Tiger)</h1>
+                                    <pre class="p-0 text-white">
+- Ăn thịt
+- Động vật có vú thuộc họ Mèo (Felidae)
+và là một trong bốn loại "mèo lớn"
+                                       </pre>
+                                 </div>
+                                 <div class="d-flex justify-content-center align-items-center">
+                                    <button type="button" class="add btn btn-danger mr-2"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                                    <button type="button" class="btn btn-danger">Chi tiết</button>
+                                 </div>
+                              </div>
+                     </div>
+               </div>
+              
          </div>
       </main>
-      <footer>
-         <h2>lien he</h2>
+      <footer style="height:300px">
       </footer>
-      
+      <script>
+            var itemCount = 0;
+            $('.add').click(function (){
+            itemCount ++;
+            $('#itemCount').html(itemCount).css('display', 'block');
+            }); 
+       </script>
    </body>
 </html>
